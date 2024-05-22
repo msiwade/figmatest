@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
+
+import { Amplify } from "aws-amplify";
+import awsconfig from "./aws-exports";
+
+import {
+  studioTheme,
+  Header,
+  RequestForm,
+  ListTitle,
+  ListDetail,
+  MenuBar,
+} from "./ui-components";
+import { Children } from "react";
 
 function App() {
+  function listbom() {
+    const bom = [];
+    bom.push(<ListTitle />);
+    bom.push(<ListDetail />);
+    return bom;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={studioTheme}>
+      <Header width={"100%"} />
+
+      <RequestForm
+        width={"100%"}
+        menuSlot={<MenuBar />}
+        tableSlot={listbom()}
+      />
+    </ThemeProvider>
   );
 }
 

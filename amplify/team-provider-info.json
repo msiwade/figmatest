@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-figmatest-dev-115919-authRole",
+      "UnauthRoleArn": "arn:aws:iam::762763643593:role/amplify-figmatest-dev-115919-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::762763643593:role/amplify-figmatest-dev-115919-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-figmatest-dev-115919-deployment",
+      "UnauthRoleName": "amplify-figmatest-dev-115919-unauthRole",
+      "StackName": "amplify-figmatest-dev-115919",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:762763643593:stack/amplify-figmatest-dev-115919/1f201a30-171e-11ef-96c2-0ed20f57491d",
+      "AmplifyAppId": "d1btfy398c67nt"
+    },
+    "categories": {
+      "auth": {
+        "figmatest": {}
+      },
+      "api": {
+        "figmatest": {}
+      }
+    }
+  }
+}
